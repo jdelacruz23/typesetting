@@ -1,4 +1,10 @@
-/* remove thic comment to add @import font or CSS variables at the top of this file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --burgundy: #800020;
+  --muted-gold: #c09c26;
+  --ivory: #F8F4E3;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -42,4 +48,171 @@ header, footer {
 }
 
 /* WRITE YOUR styling/typesetting CSS code BELOW HERE */
+
+*{
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  background-color: var(--ivory);
+}
+
+header{
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+  background-color: var(--burgundy);
+  
+}
+
+body{
+  min-width: 100%;
+  /*just so that I can make the header and footer reach 100%*/
+}
+
+h1,footer,footer>p{
+  background-color: var(--burgundy);
+  color: var(--muted-gold);
+}
+
+header, footer{
+  width: 100%;
+  /* makes it so that the header and footer takes up the whole width of the page*/
+}
+
+footer{
+  font-weight: 600;
+}
+
+body{
+  line-height: 2;
+  word-spacing: .2rem;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+h2 + p{
+  text-indent: 1.25rem;
+}
+
+section {
+  position: relative;
+  padding: 20px;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5px; 
+  background: linear-gradient(to top, transparent, var(--burgundy), transparent); /* Fading on both ends */
+}
+
+aside {
+  position: relative;
+  padding: 20px;
+}
+
+aside::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5px; /* Adjust the width of the line */
+  background: linear-gradient(to top, transparent, var(--burgundy), transparent); /* Fading on both ends */
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--burgundy); 
+  position: relative; 
+  transition: color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--burgundy);
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:link {
+  color: var(--burgundy);
+}
+
+a:visited {
+  color: var(--muted-gold);
+}
+
+a:focus {
+  outline: 2px solid var(--muted-gold);
+  color: var(--burgundy);
+}
+
+a:hover {
+  color: var(--burgundy);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--burgundy);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:active {
+  color: var(--burgundy);
+}
+
+
+nav > ul {
+  padding: 0;
+  margin: 0;
+  
+}
+
+nav > ul > li {
+  margin-right: 20px;
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+nav > ul > li a {
+  text-decoration: none;
+  color: var(--muted-gold);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav > ul > li a:hover {
+  color: var(--burgundy);
+}
+
+li{
+  list-style: disc;
+  margin-top: 1em;
+}
+
+section>ol>li:first-child{
+  list-style-image: url(./phone-svgrepo-com.svg);
+}
+section>ol>li:nth-child(2){
+  list-style-image: url(./map-brochure-brochure-map-svgrepo-com.svg);
+}
+section>ol>li:last-child{
+  list-style-image: url(./calendar-svgrepo-com.svg);
+}
 
