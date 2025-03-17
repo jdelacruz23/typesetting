@@ -126,12 +126,6 @@ aside::after {
 }
 
 
-a {
-  text-decoration: none;
-  color: var(--burgundy); 
-  position: relative; 
-  transition: color 0.3s ease;
-}
 
 a {
   text-decoration: none;
@@ -151,26 +145,21 @@ a:visited {
 
 a:focus {
   outline: 2px solid var(--muted-gold);
-  color: var(--burgundy);
 }
 
 a:hover {
-  color: var(--burgundy);
+  text-decoration: underline;
 }
 
-a::after {
+a[href^="http"]::after {
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--burgundy);
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background: url("external-link-52.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
 }
 
 a:active {
@@ -181,13 +170,13 @@ a:active {
 nav > ul {
   padding: 0;
   margin: 0;
-  
+  text-align: center;
 }
 
 nav > ul > li {
   margin-right: 20px;
   list-style: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 nav > ul > li a {
