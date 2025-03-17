@@ -125,7 +125,59 @@ aside::after {
   background: linear-gradient(to top, transparent, var(--burgundy), transparent); /* Fading on both ends */
 }
 
+/*
+This is my corrected code which has the external link png but I couldn't get it to work
+with my other styles and I didn't realized the time that it was already past the due date
+I don't know if this is acceptable or not.
 
+*/
+
+/* a {
+  text-decoration: none;
+  color: var(--burgundy);
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:link {
+  color: var(--burgundy);
+}
+
+a:visited {
+  color: var(--muted-gold);
+}
+
+a:focus {
+  outline: 2px solid var(--muted-gold);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background: url("external-link-52.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a:active {
+  color: var(--burgundy);
+} */
+
+/* Just commenting this out because it's repetitive as I already have it below */
+/* a {
+  text-decoration: none;
+  color: var(--burgundy); 
+  position: relative; 
+  transition: color 0.3s ease;
+} */
 
 a {
   text-decoration: none;
